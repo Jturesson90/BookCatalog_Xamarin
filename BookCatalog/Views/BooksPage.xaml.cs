@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using BookCatalog.Services;
+﻿using BookCatalog.Services;
 using BookCatalog.ViewModels;
 using Xamarin.Forms;
 
@@ -15,9 +13,12 @@ namespace BookCatalog.Views
             var pageService = new PageService();
 
             ViewModel = new BooksPageViewModel(bookStore, pageService);
+
             InitializeComponent();
+
             ViewModel.LoadBooksCommand.Execute(null);
         }
+
         public BooksPageViewModel ViewModel
         {
             get { return BindingContext as BooksPageViewModel; }

@@ -1,5 +1,4 @@
-﻿using System;
-using BookCatalog.Core.Models;
+﻿using BookCatalog.Core.Models;
 
 namespace BookCatalog.ViewModels
 {
@@ -8,12 +7,22 @@ namespace BookCatalog.ViewModels
         public string Title { get; private set; }
         public string Author { get; private set; }
         public string Description { get; private set; }
-
-        public string _price;
-        public string Price { get { return $"{ _price}$"; } private set { _price = value; } }
         public string Genre { get; private set; }
         public string Id { get; private set; }
         public string PublishDate { get; private set; }
+
+        public string _price;
+        public string Price
+        {
+            get
+            {
+                return $"{ _price}$";
+            }
+            private set
+            {
+                _price = value;
+            }
+        }
 
         public BookViewModel(Book book)
         {

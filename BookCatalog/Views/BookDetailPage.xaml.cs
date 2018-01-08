@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using BookCatalog.ViewModels;
+﻿using BookCatalog.ViewModels;
 using Xamarin.Forms;
 
 namespace BookCatalog.Views

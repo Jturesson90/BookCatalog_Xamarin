@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using BookCatalog.Services;
@@ -12,7 +11,6 @@ namespace BookCatalog.ViewModels
     {
         readonly IBookStore _bookStore;
         readonly IPageService _pageService;
-
 
         BookViewModel _selectedBook;
 

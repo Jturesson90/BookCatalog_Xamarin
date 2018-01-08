@@ -8,24 +8,24 @@ namespace BookCatalog.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
 
-        bool isRefreshing = false;
+        private bool _isRefreshing = false;
         public bool IsRefreshing
         {
-            get { return isRefreshing; }
-            set { SetProperty(ref isRefreshing, value); }
+            get { return _isRefreshing; }
+            set { SetProperty(ref _isRefreshing, value); }
         }
-        bool isBusy = false;
+        private bool _isBusy = false;
         public bool IsBusy
         {
-            get { return isBusy; }
-            set { SetProperty(ref isBusy, value); }
+            get { return _isBusy; }
+            set { SetProperty(ref _isBusy, value); }
         }
 
-        string pageTitle = string.Empty;
+        private string _pageTitle = string.Empty;
         public string PageTitle
         {
-            get { return pageTitle; }
-            set { SetProperty(ref pageTitle, value); }
+            get { return _pageTitle; }
+            set { SetProperty(ref _pageTitle, value); }
         }
 
         protected bool SetProperty<T>(ref T backingStore, T value,
