@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage x:Name="page" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="BookCatalog.Views.BooksPage">
+    <ListView ItemsSource="{Binding Books}" SelectedItem="{Binding SelectedBook, Mode=TwoWay}" ItemSelected="Handle_BookSelected" IsPullToRefreshEnabled="true" RefreshCommand="{Binding LoadBooksCommand}" IsRefreshing="{Binding IsRefreshing}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Title}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
