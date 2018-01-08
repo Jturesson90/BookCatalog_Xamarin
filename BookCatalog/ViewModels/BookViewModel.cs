@@ -2,8 +2,10 @@
 
 namespace BookCatalog.ViewModels
 {
-    public class BookViewModel : BaseViewModel
+    public class BookViewModel
     {
+        private string _price;
+
         public string Title { get; private set; }
         public string Author { get; private set; }
         public string Description { get; private set; }
@@ -11,7 +13,6 @@ namespace BookCatalog.ViewModels
         public string Id { get; private set; }
         public string PublishDate { get; private set; }
 
-        private string _price;
         public string Price
         {
             get

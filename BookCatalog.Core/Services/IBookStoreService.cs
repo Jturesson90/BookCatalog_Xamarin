@@ -2,9 +2,9 @@
 using System.Threading.Tasks;
 using BookCatalog.Core.Models;
 
-namespace BookCatalog.Services
+namespace BookCatalog.Core.Services
 {
-    public interface IBookStore
+    public interface IBookStoreService
     {
         Task<IEnumerable<Book>> GetBooksAsync();
     }

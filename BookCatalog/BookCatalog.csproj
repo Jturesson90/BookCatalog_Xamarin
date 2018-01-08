@@ -29,7 +29,6 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
-    <EmbeddedResource Include="BookCatalogPage.xaml" />
     <EmbeddedResource Include="Views\BooksPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -43,24 +42,19 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BookCatalogPage.xaml.cs">
-      <DependentUpon>BookCatalogPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\BooksPage.xaml.cs">
       <DependentUpon>BooksPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\BooksPageViewModel.cs" />
-    <Compile Include="Services\IBookStore.cs" />
     <Compile Include="ViewModels\BookViewModel.cs" />
-    <Compile Include="Services\BookStoreService.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="Services\IPageService.cs" />
-    <Compile Include="Services\PageService.cs" />
     <Compile Include="ViewModels\BookDetailViewModel.cs" />
     <Compile Include="Views\BookDetailPage.xaml.cs">
       <DependentUpon>BookDetailPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\IPageService.cs" />
+    <Compile Include="Services\PageService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -84,7 +78,6 @@
     <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Views\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Services\" />

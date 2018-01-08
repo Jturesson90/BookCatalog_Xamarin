@@ -4,5 +4,6 @@
         <Label Text="{Binding Path=Book.Title}" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center" />
         <Label Text="{Binding Path=Book.Genre}" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" />
         <Label Text="{Binding Path=Book.Price}" FontSize="Medium" HorizontalTextAlignment="Center" TextColor="#F44336" />
+        <Label Text="{Binding Path=Book.Description}" Margin="20" HorizontalTextAlignment="Center"/>
     </StackLayout>
 </ContentPage>

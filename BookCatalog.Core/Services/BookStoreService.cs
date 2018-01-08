@@ -5,9 +5,9 @@ using BookCatalog.Core.Models;
 using BookCatalog.Core.Net.Messages;
 using Newtonsoft.Json;
 
-namespace BookCatalog.Services
+namespace BookCatalog.Core.Services
 {
-    public class BookStoreService : IBookStore
+    public class BookStoreService : IBookStoreService
     {
         private readonly string _url = "https://api.myjson.com/bins/14jdb";
         private readonly HttpClient _client = new HttpClient();

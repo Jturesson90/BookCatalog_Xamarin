@@ -1,5 +1,4 @@
-﻿using System;
-namespace BookCatalog.Core.Models
+﻿namespace BookCatalog.Core.Models
 {
     public class Book
     {

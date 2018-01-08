@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using BookCatalog.Core.Services;
 using BookCatalog.Services;
 using BookCatalog.Views;
 using Xamarin.Forms;
@@ -9,7 +10,7 @@ namespace BookCatalog.ViewModels
 {
     public class BooksPageViewModel : BaseViewModel
     {
-        private readonly IBookStore _bookStore;
+        private readonly IBookStoreService _bookStore;
         private readonly IPageService _pageService;
 
         private BookViewModel _selectedBook;
@@ -25,7 +26,7 @@ namespace BookCatalog.ViewModels
         public ICommand LoadBooksCommand => new Command(async () => await LoadBooks());
         public ICommand SelectBookCommand => new Command<BookViewModel>(async book => await SelectBook(book));
 
-        public BooksPageViewModel(IBookStore bookStore, IPageService pageService)
+        public BooksPageViewModel(IBookStoreService bookStore, IPageService pageService)
         {
             _bookStore = bookStore;
             _pageService = pageService;

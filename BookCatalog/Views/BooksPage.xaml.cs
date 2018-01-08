@@ -1,4 +1,5 @@
-﻿using BookCatalog.Services;
+﻿using BookCatalog.Core.Services;
+using BookCatalog.Services;
 using BookCatalog.ViewModels;
 using Xamarin.Forms;
 
