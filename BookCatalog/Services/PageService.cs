@@ -9,11 +9,13 @@ namespace BookCatalog.Services
         {
             await MainPage.Navigation.PushAsync(page);
         }
+
         public async Task<Page> PopAsync()
         {
             return await MainPage.Navigation.PopAsync();
         }
-        Page MainPage
+
+        private Page MainPage
         {
             get { return Application.Current.MainPage; }
         }

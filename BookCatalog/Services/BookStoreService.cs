@@ -9,9 +9,8 @@ namespace BookCatalog.Services
 {
     public class BookStoreService : IBookStore
     {
-
-        readonly string _url = "https://api.myjson.com/bins/14jdb";
-        readonly HttpClient _client = new HttpClient();
+        private readonly string _url = "https://api.myjson.com/bins/14jdb";
+        private readonly HttpClient _client = new HttpClient();
 
         public async Task<IEnumerable<Book>> GetBooksAsync()
         {

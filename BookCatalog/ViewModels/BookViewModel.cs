@@ -11,7 +11,7 @@ namespace BookCatalog.ViewModels
         public string Id { get; private set; }
         public string PublishDate { get; private set; }
 
-        public string _price;
+        private string _price;
         public string Price
         {
             get

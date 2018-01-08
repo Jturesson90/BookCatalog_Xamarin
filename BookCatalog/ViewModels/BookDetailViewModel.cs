@@ -6,6 +6,7 @@ namespace BookCatalog.ViewModels
     public class BookDetailViewModel : BaseViewModel
     {
         public Book Book { get; private set; }
+
         public BookDetailViewModel(BookViewModel bookViewModel)
         {
             if (bookViewModel == null)

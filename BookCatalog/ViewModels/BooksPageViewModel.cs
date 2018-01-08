@@ -9,34 +9,26 @@ namespace BookCatalog.ViewModels
 {
     public class BooksPageViewModel : BaseViewModel
     {
-        readonly IBookStore _bookStore;
-        readonly IPageService _pageService;
+        private readonly IBookStore _bookStore;
+        private readonly IPageService _pageService;
 
-        BookViewModel _selectedBook;
+        private BookViewModel _selectedBook;
 
-        ObservableCollection<BookViewModel> _books = new ObservableCollection<BookViewModel>();
+        public ObservableCollection<BookViewModel> Books { get; set; } = new ObservableCollection<BookViewModel>();
 
-        public ObservableCollection<BookViewModel> Books
-        {
-            get { return _books; }
-            set { SetProperty(ref _books, value); }
-        }
         public BookViewModel SelectedBook
         {
             get { return _selectedBook; }
-            set { SetProperty(ref _selectedBook, value); }
+            set { _selectedBook = value; SelectBookCommand.Execute(value); }
         }
 
-        public ICommand LoadBooksCommand { get; private set; }
-        public ICommand SelectBookCommand { get; private set; }
+        public ICommand LoadBooksCommand => new Command(async () => await LoadBooks());
+        public ICommand SelectBookCommand => new Command<BookViewModel>(async book => await SelectBook(book));
 
         public BooksPageViewModel(IBookStore bookStore, IPageService pageService)
         {
             _bookStore = bookStore;
             _pageService = pageService;
-
-            LoadBooksCommand = new Command(async () => await LoadBooks());
-            SelectBookCommand = new Command<BookViewModel>(async book => await SelectBook(book));
         }
 
         async Task SelectBook(BookViewModel book)
@@ -46,7 +38,6 @@ namespace BookCatalog.ViewModels
 
             var bookDetailViewModel = new BookDetailViewModel(book);
             await _pageService.PushAsync(new BookDetailPage(bookDetailViewModel));
-
         }
 
         async Task LoadBooks()
@@ -54,10 +45,12 @@ namespace BookCatalog.ViewModels
             IsRefreshing = true;
             var books = await _bookStore.GetBooksAsync();
             Books.Clear();
+
             foreach (var book in books)
             {
                 Books.Add(new BookViewModel(book));
             }
+
             IsRefreshing = false;
         }
     }
