@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalog", "BookCatalog\BookCatalog.csproj", "{7FA70D93-2305-44F6-8780-0BBD27C35E4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalog.old", "BookCatalog\BookCatalog.old.csproj", "{7FA70D93-2305-44F6-8780-0BBD27C35E4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookCatalog.iOS", "iOS\BookCatalog.iOS.csproj", "{815DBB17-E0C5-4F00-881A-43A36071A590}"
 EndProject

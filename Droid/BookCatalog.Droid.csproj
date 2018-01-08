@@ -110,7 +110,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BookCatalog\BookCatalog.csproj">
       <Project>{7FA70D93-2305-44F6-8780-0BBD27C35E4D}</Project>
-      <Name>BookCatalog</Name>
+      <Name>BookCatalog.old</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
