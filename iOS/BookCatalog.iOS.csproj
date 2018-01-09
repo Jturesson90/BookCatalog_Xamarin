@@ -102,12 +102,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BookCatalog\BookCatalog.csproj">
-      <Project>{7FA70D93-2305-44F6-8780-0BBD27C35E4D}</Project>
-      <Name>BookCatalog.old</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
   </ItemGroup>
@@ -125,6 +119,16 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BookCatalog\BookCatalog.csproj">
+      <Project>{D5AEFB3F-9DE7-4B88-8323-4A4CA03AAE09}</Project>
+      <Name>BookCatalog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BookCatalog.Coresss\BookCatalog.Core.csproj">
+      <Project>{06076BC8-6933-4B75-80F1-59D86794C6BF}</Project>
+      <Name>BookCatalog.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.121934\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.121934\build\netstandard1.0\Xamarin.Forms.targets')" />
